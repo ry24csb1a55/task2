@@ -1,0 +1,12 @@
+#director{
+    float: left;
+    size: 100px;
+    margin: 12px;
+}
+#direcside{
+    float: right;
+
+}
+#message{
+    font-size: 19px;
+}

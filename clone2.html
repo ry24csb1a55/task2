@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIT Warangal Clone</title>
+
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: beige;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        .top {
+            background-color: rgb(0, 0, 243);
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            min-height: 50px;
+            font-weight: bold;
+            overflow: hidden;
+        }
+
+        .typewriter-text {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid white;
+            animation: typing 4s steps(60, end), blink-caret 0.8s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            50% { border-color: transparent; }
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            background-color: beige;
+            margin-top: 50px;
+            margin-left: 90px;
+        }
+        
+
+        .logo {
+            height: 120px;
+            display: inline-block;
+        }
+
+        nav select {
+            background-color: white;
+            font-size: large;
+            border-radius: 4px;
+            margin: 8px;
+            padding: 5px;
+        }
+        nav select:hover{
+            background-color: rgb(201, 201, 201);
+            box-shadow: 0px 0px 5px rgba(59, 59, 59,0.5);
+        }
+
+        .blue-line {
+            border: 2px solid blue;
+        }
+
+        .announcements {
+            background: yellow;
+            padding: 10px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+
+        .slider-container {
+            position: relative;
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+        #director{
+            float: left;
+            size: 100px;
+            margin: 12px;
+        }
+        #direcside{
+            float: right;
+
+        }
+        #message{
+            font-size: 19px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h3 class="top">
+            <span class="typewriter-text" id="typewriter"></span>
+        </h3>
+    </header>
+
+    <div>
+        <img src="NITW_logo_telugu3.png" alt="NITW Logo" class="logo">
+        <img src="g-20-logo.png" alt="" style="margin-left: 40px;">
+        <img src="ajadi.png" alt="" style="margin-left: 80px;">
+
+    </div>
+    
+
+    <div class="navbar">
+        
+        <nav>
+            <select>
+                <option>Institute</option>
+                <option>About Us</option>
+                <option>Giving Back</option>
+                <option>Key Documents</option>
+                <option>Vision and Mission</option>
+            </select>
+            <select>
+                <option>Administration</option>
+                <option>Chairperson</option>
+                <option>Director</option>
+                <option>Key Documents</option>
+            </select>
+            <select>
+                <option>Academics</option>
+                <option>Academic Cell</option>
+                <option>Departments</option>
+                <option>Examinations</option>
+            </select>
+            <select>
+                <option>Research & Development</option>
+                <option>SRIC CELL</option>
+                <option>Publications</option>
+            </select>
+            <select>
+                <option>Students</option>
+                <option>Student Welfare</option>
+                <option>Clubs & Societies</option>
+                <option>Hostel Life</option>
+            </select>
+            <select>
+                <option>Alumni</option>
+                <option>Giving Back</option>
+                <option>Alumni Meet</option>
+            </select>
+        </nav>
+    </div>
+
+    <hr class="blue-line">
+
+    <section class="announcements">
+        <marquee><b>📢 Announcement: Results are out | New Academic Session Starts Soon | Placement Updates</b></marquee>
+    </section>
+
+    <hr class="blue-line">
+
+
+    <div class="slider-container">
+        <div class="slider">
+            <img src="campus1.jpg" alt="Campus Image 1" class="slide">
+            <img src="campus2.jpg" alt="Campus Image 2" class="slide">
+            <img src="campus3.jpg" alt="Campus Image 3" class="slide">
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+    <br><br>
+    <h2>Director's Message :</h2>
+
+<img src="Director_image1_2023-5-20-12-32-22.jpg" alt="" id ="director" height="300">
+<img src="Screenshot 2025-01-10 141834.png" alt="" id="direcside">
+<p id="message">I am glad that I have been given an opportunity to serve as the Director of National Institute of Technology (NIT) Warangal-the oldest one in the bracket of first 17 NITs. It is an honour and privilege for me to lead this prestigious institute which has a rich history of its distinction in teaching, research and service to the nation. It is the first regional engineering college whose foundation stone has been laid by the former prime minister, Pandit Jawaharlal Nehru in the year 1959. Over a period of more than six decades, NIT Warangal has emerged as one of the leading institutions in engineering and technology. Warangal is the second largest city of the state of Telangana, Hyderabad being the first one which has several places of interest to visit. Some of the cultural heritages worth seeing in Warangal are Ramappa Temple, Bhadrakali Temple and thousand pillar temple. NIT Warangal is poised to create an ambience for nurturing innovation, incubation, creativity and excellence within its faculty and students towards achieving the sustainable development goals. We emphasize on student centric education with interdisciplinary research and development for the benefit of Industry and Society. NIT Warangal becomes a preferred institution for top rankers in Joint Entrance Examination (Main) because of its excellent teaching learning process, infrastructure that a student needs for effective learning. Our alumni have received distinguished recognitions in their chosen areas of profession and extend support towards sustainable development of the institute. I invite participation of all the stakeholders in the growth plan of the institute to steer it to the next level of success in all fronts.</p>
+
+    <h2 style="text-align: center; color: brown;">campus life :</h2>
+        <marquee behavior="" direction="">
+            <img src="nitw_building.jpg" height="400">
+            <img src="images.jfif"   height="400">
+            <img src="plane.png" alt="" height="400">
+            <img src="gate.png" alt=""height="400">
+        </marquee>
+
+    <hr>
+
+    <h2 style="text-align: center; color: brown;">News :</h2>
+    <img src="news.png" alt="" width="100%">
+
+
+    <H2 align ="center">OUR Placements :</H2>
+<H3 align ="center"><a href="https://nitw.ac.in/ccpd">Visit Centre for Career Planning and Development<a></H3>
+<img src="Screenshot 2024-12-27 173555.png"  align="center">
+
+    <script>
+
+        const text = "Welcome to National Institute of Technology Warangal - Ranked 21st in Engineering (NIRF 2024)";
+        let index = 0;
+        function typeEffect() {
+            if (index < text.length) {
+                document.getElementById("typewriter").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeEffect, 50);
+            }
+        }
+        document.addEventListener("DOMContentLoaded", typeEffect);
+
+
+
+        let slideIndex = 0;
+        const slides = document.querySelectorAll(".slide");
+
+        function showSlide(index) {
+            if (index >= slides.length) {
+                slideIndex = 0;
+            } else if (index < 0) {
+                slideIndex = slides.length - 1;
+            } else {
+                slideIndex = index;
+            }
+
+            document.querySelector(".slider").style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(slideIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(slideIndex - 1);
+        }
+
+        setInterval(nextSlide, 3000);
+    </script>
+
+</body>
+</html>
